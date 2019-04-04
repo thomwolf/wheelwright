@@ -6,7 +6,7 @@ env:
   - PLAT=x86_64
   - UNICODE_WIDTH=32
   - WHEELHOUSE_UPLOADER_USERNAME=travis-worker
-  - secure: "vBlujcSN9RBJ87/kfs8hHcLLebSCot5xKFmX69WZsTYYAWi6HUD5MEb/HF+6gZR0Ig4fJfJjN3nvqJ++N+gR912fZeFO6ta8WBiTaF0/CrPSxM5wySxTug53jOtxStoMInrysDIxwEBf7lUQdxeDdNZCKJbArtfmbmHeCiS0+UKNNJhsvx4KvMEXqFBJj5ydVNXvbRZHJZDFyKvVwgjnS5mVnWE4tvP7IhU/AtBzYL7s81/K6bpWxSrYnNnIqt3z02qHH+EGtVFRLuqzF+okp+LlKez/WAjheahqBZ6aomldmvYX1WYgUpiCEbCOBxt8UqF7InQ2ZfjscIA1KBdq+GcslYBoEsbU2PTwUVUPCeq6BK23UBni7VlKqMtoXppVj381tlPCxYwkKJR6ftFSyqI3ylqsHkONjevLkKKXPnLJiiClDY2Di5tsOMxAlljLyThKQfNgpEfFgFqVGFdFLiT3vVFzTvHAZlv1Oyw+c5T61UEovEVF3FZmy0K/yPLppVlM/WhQ8ZqOWCoeJacnGONhKxUIywOe4+ZFojIkrT9G/ztZp8KCfH+uxK6ieZ0MzOZ11ZlBZ22VGsZiAYm4/1PciGvgqeSWJjYWPwKU16R4YV9CMX4P/FSNwdnkyX0Hb1SB+IBBJ2yxxVxLiY7EkMdOzlu6LJVRymk7VY8utTA="
+  - secure: "FJeJYD+WyKIG0TQi8Sm8YHmQN/x7ljERm7HHCcyMg8j5TUAhyYme6zc3cdg3g67GvHHe/LHfntPinzlJei9OjDvgHvGLQYwE4TMZOdjR2894WykJLUCKAZrHBG0djBY9N8EFZwCamhWIW3AVvyFM6S9qKvdpfQFnazsqtAWkiiG04dLq2vVMI8yp4Ys+2OHrgRQtviZn2jiLZvMyuzEAGOprQaBO6xNeVMo0A6CA3omCdtYEvEe4KamUgyKnyRhwg7elJzRNHK6yA/KHoP/HI94PwzqAkli1XRQ4np9X6iYT0ZzJOf2WaJCNLySx3KpbN6G6YXf3Ne54EIAxrC56KUsXG8HrVlESHZUclZ06BwZaIV3TSda+AW6yFq0yfH4bN/uhw6BXZSr1TS3N5Iqr2Ld/zsSJ1LEFEp1IkZ+c6fU6o3LiYSvb8bcMoiXTG7a0wLzF0rUDV5fKd2avSMkqZAzLrGF5jDBUIMSA8S/DVcbiyY7nYj1KZ3zYWnDkkPxTncaDjGFXxCFx94VYj+vYZ1YizbS2+y0UAPpK3y82fPTFedXDHiDklVhh/9bEjLXwxxpSyk9eVLnfqFXzqSAyR8GxaMOnGPTQXoCXFFLBHlbX0rpVOgm5NQlPsrPnAwLeBRH+83Fo5fa9B3uqA/LSr2fl6U1YQzDevkf4TCV8SiQ="
 language: python
 sudo: required
 dist: xenial
@@ -46,7 +46,6 @@ matrix:
     env:
     - MB_PYTHON_VERSION=3.7
 before_install:
-# This is gettext needed for envsubst on osx =/
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install gettext; fi
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew link --force gettext; fi
 - pip install -Ur ./requirements.txt
