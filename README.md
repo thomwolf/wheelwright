@@ -136,7 +136,7 @@ Ubuntu, I was able to get it working by doing:
 ```bash
 sudo apt install ruby-dev
 gem install --user-install travis
-~/.gem/ruby/*/bin/travis encrypt GITHUB_SECRET_TOKEN=f7d4d475c85ba2ae9557391279d1fc2368f95c38
+~/.gem/ruby/*/bin/travis encrypt GITHUB_SECRET_TOKEN=f7d4d475c85ba2ae9557391279d1fc2368f95c38 --org -r thomwolf/wheelwright
 ```
 
 Then copy the gibberish it gives you into `.travis.yml`.
